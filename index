@@ -1,0 +1,15 @@
+//set the variable and assign the url as a string
+//variable-$url
+//string assigned ""
+$url = "";
+
+//to create a dynamic array from the url (which is a string) i have used json_decode
+$data = json_decode($url);
+
+//using it as an object
+foreach ( $data->$results as $result )
+{
+    echo "{$result->water_points}\n";
+    echo "{$result->water_points}\n";
+    echo "{$result->water_points}\n";
+}

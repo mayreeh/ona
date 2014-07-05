@@ -1,7 +1,8 @@
 //set the variable and assign the url as a string
 //variable-$url
 //string assigned ""
-$url = "";
+
+$url = "https://raw.githubuercontent.com/onaio/ona-tech/mater/data/water_points.json";
 
 //to create a dynamic array from the url (which is a string) i have used json_decode
 $data = json_decode($url);
@@ -9,7 +10,9 @@ $data = json_decode($url);
 //using it as an object
 foreach ( $data->$results as $result )
 {
-    echo "{$result->water_points}\n";
-    echo "{$result->water_points}\n";
-    echo "{$result->water_points}\n";
+//loop to retrieve water_functoning as per communities village
+    echo $result->communities_villages;
+    echo "-";
+    echo $result->water_functioning;
+    
 }
